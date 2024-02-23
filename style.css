@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+
+body{
+    background-color: antiquewhite;
+}
+nav{
+    position: fixed;
+}
+.resumeimage { 
+    max-width: 100%;
+    width: 80vw;
+    height: 80vh;
+  }
+.text-main{
+    font-weight: 500;
+    font-size: xxx-large;
+    font-family:Arial, Helvetica, sans-serif;
+}
+button{
+    margin-top: 100px;
+}
+.resumeimage {
+    transition: transform 0.3s ;
+  }
+  
+.resumeimage:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+}
+footer{
+    display: block;
+    position: end;
+    height: 50px;
+}
+.navbar-git{
+    text-decoration: none;
+    font-weight: 500;
+}
+.navbar-git:hover{
+    font-size: 120% ;
+}
+
