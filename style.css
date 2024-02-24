@@ -12,20 +12,20 @@ nav{
     height: 80vh;
   }
 .text-main{
-    font-weight: 500;
-    font-size: xxx-large;
+    font-weight: 300;
+    font-size: 270%;
     font-family:Arial, Helvetica, sans-serif;
 }
 button{
     margin-top: 100px;
 }
 .resumeimage {
-    transition: transform 0.3s ;
+    transition: transform 1s ;
   }
   
 .resumeimage:hover {
     transform: scale(1.01);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+    box-shadow: 16px 16px 16px rgba(10, 113, 224, 0.2); /* Optional: Adds a subtle shadow */
 }
 footer{
     display: block;
