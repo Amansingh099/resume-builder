@@ -28,8 +28,9 @@ button{
     box-shadow: 16px 16px 16px rgba(10, 113, 224, 0.2); /* Optional: Adds a subtle shadow */
 }
 footer{
-    display: block;
+    display: flex;
     position: end;
+    text-align: center;
     height: 50px;
 }
 .navbar-git{

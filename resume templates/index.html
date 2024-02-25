@@ -24,19 +24,28 @@
 </style>
 
 <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-info">
+        <div class="container-fluid text-white">
+          <a class="navbar-brand text-white fw-bolder" href="#">ACERESUME</a>
+            <a class="navbar-git text-white " href="https://github.com/Amansingh099/resume-builder" >
+                <i class="fa-brands fa-github"></i> GITHUB
+            </a>
+          </div>
+        </div>
+      </nav>
     <div class="nav">
         <a href="../index.html"><button class="navbtn" ><i class="fas fa-home"></i></button></a>
         <button id="cmd" onclick="printpdf()" class="navbtn"><i class="fas fa-download"></i></button>
     </div>
 
-    <div class="container-12 bg-white resume">
+    <div class="container bg-white resume">
         <section id="print" class="container">
-            <div class="head">
-                <div class="main">
+            <div class="head row">
+                <div class="main col-8">
                     <span class="name" contenteditable="true">YOUR</span>&nbsp<span contenteditable="true">NAME</span>
                     <div class="post" contenteditable="true">YOUR JOB PROFILE</div>
                 </div>
-                <div class="contacts">
+                <div class="contacts col-4">
                     <span contenteditable="true" class="content">+98-XXXXXXXXXX</span><span class="symbol"> <i
                             class="fas fa-phone"></i></span><br>
                     <span contenteditable="true" class="content">sampleemail@gmail.com</span><span class="symbol"> <i
@@ -49,8 +58,8 @@
             </div>
 
             <div class="line"></div>
-            <div class="mainbody">
-                <div class="leftside">
+            <div class="mainbody row">
+                <div class="leftside col">
                     <span class="title">MY SKILLS</span><br><br>
                     <div>
                         <div class="skill"><span><input type="checkbox" class="input-checkbox"></span><span><i
@@ -99,7 +108,7 @@
                 </div>
 
                 <div class="border"></div>
-                <div class="rightside">
+                <div class="rightside col">
                     <span class="title">PROFILE</span><br><br>
                     <div contenteditable="true">
                         Here u can write the basic information about your career like your forte, something about
