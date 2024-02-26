@@ -25,7 +25,9 @@ nav{
     font-weight: 500;
 }
 .navbar-git:hover{
-    font-size: 120% ;
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2); 
+    transform: scale(1.2); 
 }
 
 .none {
