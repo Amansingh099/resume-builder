@@ -20,12 +20,16 @@ button{
     margin-top: 100px;
 }
 .resumeimage {
-    transition: transform 1s ;
-  }
-  
-.resumeimage:hover {
-    transform: scale(1.01);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.25); /* Optional: Adds a subtle shadow */
+    transition: transform 1s; 
+    animation: pulse 2s infinite alternate; 
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { 
+        transform: scale(1.01); 
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.25); 
+    }
 }
 footer{
     display: flex;
