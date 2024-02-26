@@ -206,3 +206,20 @@ function saveresume() {
     var info = document.getElementById("custinfo");
     info.value = value1;
 }
+const editableElements = document.querySelectorAll('.editable');
+editableElements.forEach(element => {
+    const defaultText=element.innerHTML;
+    element.addEventListener('click', (event) => {
+        if (!element.cleared) { 
+          element.textContent = ''; 
+          element.cleared = true; 
+        }
+        event.stopPropagation();   
+    });
+    element.addEventListener('blur', () => {
+        if (element.textContent === '') {
+            element.textContent = defaultText; 
+            element.cleared = false;           
+        }
+    });
+});

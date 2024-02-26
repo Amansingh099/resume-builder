@@ -36,9 +36,10 @@ nav{
 
 .resume {
     margin-top: 20px;
+    margin-bottom:20px;
     min-width: 650px;
     max-width: 80vw;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    box-shadow: rgba(17, 17, 26, 0.1) 16px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 /* @media (max-width: 567px){
     .resume{
@@ -146,7 +147,7 @@ nav{
     font-size: 18px;
     border: none;
     padding-bottom: 3px;
-    border-bottom: 2px greenyellow solid;
+    border-bottom: 2px rgb(68, 156, 178) solid;
 }
 
 .skill {
@@ -234,4 +235,10 @@ button {
 }
 .btn{
     border-radius: 20px;
+}
+footer{
+    display: flex;
+    position: end;
+    text-align: center;
+    height: 50px;
 }
