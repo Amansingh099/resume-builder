@@ -10,7 +10,7 @@
 
 
 body {
-    background: linear-gradient(180deg, rgba(240, 244, 244, 0.8) 0%, #09657f 150%); 
+    background: linear-gradient(180deg, rgba(240, 242, 244, 0.8) 0%, #09657f 150%); 
 
     display: grid;
     /* place-items: center; */
@@ -221,10 +221,10 @@ button {
     width: 65px;
 }
 .btn-success{
-    background-color: rgb(162, 215, 215);
+    background-color:rgb(45, 119, 156);
 }
 .btn-success:hover{
-   background-color: aqua;
+   background-color: rgb(3, 46, 89);
 }
 .btn-danger{
     background-color: #3d3d3d;
