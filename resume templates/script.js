@@ -28,7 +28,8 @@ function printpdf() {
 function addedu() {
     const head = document.createElement('div');
     document.getElementById("education").appendChild(head);
-    head.innerHTML = ('<div class="edublock"><span><input type="checkbox" class="input-checkbox"></span><span class="education-head" contenteditable="true">YOUR DEGREE</span><div ><span contenteditable="true">Institute name</span> - <span contenteditable="true">Passing Year</span></div></div>');
+    head.innerHTML = ('<div class="edublock"><span><input type="checkbox" class="input-checkbox"></span><span class="education-head editable" contenteditable="true">YOUR DEGREE</span><div ><span class="editable"contenteditable="true">Institute name</span> - <span contenteditable="true" class="editable">Passing Year</span></div></div>');
+    additngclass();
     saveresume();
 }
 function remedu(event) {
@@ -36,7 +37,7 @@ function remedu(event) {
     let empty = true;
     const allInputCheckboxes = event.target.parentElement.getElementsByClassName("input-checkbox");
     const array = Array.from(allInputCheckboxes);
-    if (array.length === 0) {
+    if (array.length == 0) {
         alert("No Fields Are Present To Be Deleted!")
     }
     else {
@@ -49,6 +50,7 @@ function remedu(event) {
         })
         if (val === 0) alert("Please Select The Checkboxes To Delete The Required Field!")
     }
+    additngclass();
     saveresume();
 }
 
@@ -56,7 +58,8 @@ function remedu(event) {
 function addskill() {
     const head = document.createElement('div');
     document.getElementById("skills").appendChild(head);
-    head.innerHTML = ('<div class="skill"><span><input type="checkbox" class="input-checkbox"></span><span><i class="fas fa-chevron-circle-right"></i></span>&nbsp&nbsp&nbsp<span contenteditable="true">write your skill here</span></div>');
+    head.innerHTML = ('<div class="skill"><span><input type="checkbox" class="input-checkbox"></span><span><i class="fas fa-chevron-circle-right"></i></span>&nbsp&nbsp&nbsp<span contenteditable="true" class="editable">write your skill here</span></div>');
+    additngclass();
     saveresume();
 }
 function remskill(event) {
@@ -76,6 +79,7 @@ function remskill(event) {
         })
         if (val === 0) alert("Please Select The Checkboxes To Delete The Required Field!")
     }
+    additngclass();
     saveresume();
 }
 
@@ -83,7 +87,8 @@ function remskill(event) {
 function addLang() {
     const head = document.createElement('div');
     document.getElementById("languages").appendChild(head);
-    head.innerHTML = ('<div class="language"><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true">LANGNAME</span>&nbsp-&nbsp<span contenteditable="true">level u know</span></div>');
+    head.innerHTML = ('<div class="language"><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true" class="editable">LANGNAME</span>&nbsp-&nbsp<span contenteditable="true" class="editable">level u know</span></div>');
+    additngclass();
     saveresume();
 }
 function remLang(event) {
@@ -103,6 +108,7 @@ function remLang(event) {
         })
         if (val === 0) alert("Please Select The Checkboxes To Delete The Required Field!")
     }
+    additngclass();
     saveresume();
 }
 
@@ -110,7 +116,8 @@ function remLang(event) {
 function addAch() {
     const head = document.createElement('div');
     document.getElementById("achievement").appendChild(head);
-    head.innerHTML = ('<div class="achieve" ><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true">Write your achievement</span></div>');
+    head.innerHTML = ('<div class="achieve" ><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true" class="editable">Write your achievement</span></div>');
+    additngclass();
     saveresume();
 }
 function remAch(event) {
@@ -130,6 +137,7 @@ function remAch(event) {
         })
         if (val === 0) alert("Please Select The Checkboxes To Delete The Required Field!")
     }
+    additngclass();
     saveresume();
 }
 
@@ -137,7 +145,8 @@ function remAch(event) {
 function addInt() {
     const head = document.createElement('div');
     document.getElementById("interest").appendChild(head);
-    head.innerHTML = ('<div class="achieve" ><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true">Write interest</span></div>');
+    head.innerHTML = ('<div class="achieve" ><span><input type="checkbox" class="input-checkbox"></span><span class="editable" contenteditable="true">Write interest</span></div>');
+    additngclass();
     saveresume();
 }
 function remInt(event) {
@@ -156,6 +165,7 @@ function remInt(event) {
         })
         if (val === 0) alert("Please Select The Checkboxes To Delete The Required Field!")
     }
+    additngclass();
     saveresume();
 }
 
@@ -165,10 +175,10 @@ function addsec() {
         const head = document.createElement('div');
         document.getElementById("newsec").appendChild(head);
         if (maxNewSection === 0) {
-            head.innerHTML = ('<div><span><input type="checkbox" class="input-checkbox"></span><span class="title" contenteditable="true">NEW SECTION</span><br><br><div contenteditable="true">This is the description part of your new section. Try to stay within limit and write something which has less than 400 characters. The spaces and symbols you use will also be included so use them for an indentation effect.</div></div>');
+            head.innerHTML = ('<div><span><input type="checkbox" class="input-checkbox"></span><span class="title editable" contenteditable="true">NEW SECTION</span><br><br><div contenteditable="true" class="editable">This is the description part of your new section. Try to stay within limit and write something which has less than 400 characters. The spaces and symbols you use will also be included so use them for an indentation effect.</div></div>');
         }
         else {
-            head.innerHTML = ('<div><br><br><span><input type="checkbox" class="input-checkbox"></span><span class="title" contenteditable="true">NEW SECTION</span><br><br><div contenteditable="true">This is the description part of your new section. Try to stay within limit and write something which has less than 400 characters. The spaces and symbols you use will also be included so use them for an indentation effect.</div></div>');
+            head.innerHTML = ('<div><br><br><span><input type="checkbox" class="input-checkbox"></span><span class="title editable" contenteditable="true">NEW SECTION</span><br><br><div contenteditable="true" class="editable>This is the description part of your new section. Try to stay within limit and write something which has less than 400 characters. The spaces and symbols you use will also be included so use them for an indentation effect.</div></div>');
         }
 
         maxNewSection = maxNewSection + 1;
@@ -177,6 +187,7 @@ function addsec() {
         alert("Atmost 1 NEW SECTION Can Be Added!")
 
     }
+    additngclass();
     saveresume();
 }
 function remsec(event) {
@@ -197,6 +208,7 @@ function remsec(event) {
         })
         if (val === 0) alert("Please Select The Checkboxes To Delete The Required Field!")
     }
+    additngclass();
     saveresume();
 }
 
@@ -206,20 +218,28 @@ function saveresume() {
     var info = document.getElementById("custinfo");
     info.value = value1;
 }
-const editableElements = document.querySelectorAll('.editable');
-editableElements.forEach(element => {
-    const defaultText=element.innerHTML;
-    element.addEventListener('click', (event) => {
-        if (!element.cleared) { 
-          element.textContent = ''; 
-          element.cleared = true; 
-        }
-        event.stopPropagation();   
+
+let editableElements=document.querySelectorAll('.editable');
+
+function additngclass(){
+    editableElements = document.querySelectorAll('.editable');
+    editableElements.forEach(element => {
+        const defaultText=element.innerHTML;
+        element.addEventListener('click', (event) => {
+            if (!element.cleared) { 
+              element.textContent = ''; 
+              element.cleared = true; 
+            }
+            event.stopPropagation();   
+        });
+        element.addEventListener('blur', () => {
+            if (element.textContent === '') {
+                element.textContent = defaultText; 
+                element.cleared = false;           
+            }
+        });
     });
-    element.addEventListener('blur', () => {
-        if (element.textContent === '') {
-            element.textContent = defaultText; 
-            element.cleared = false;           
-        }
-    });
-});
+}
+additngclass();
+
+
