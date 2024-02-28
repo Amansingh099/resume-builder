@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body{
     background-color: antiquewhite;
@@ -9,28 +10,25 @@ nav{
 .resumeimage { 
     max-width: 100%;
     width: 80vw;
-    height: 80vh;
+    max-height: 80vh;
+
   }
 .text-main{
     font-weight: 300;
-    font-size: 270%;
-    font-family:Arial, Helvetica, sans-serif;
+    font-size: calc(1.5rem + 2.5vw);
 }
 button{
     margin-top: 100px;
 }
-.resumeimage {
-    transition: transform 1s; 
-    animation: pulse 3s infinite alternate; 
-}
 
-@keyframes pulse {
+
+/* @keyframes pulse {
     0% { transform: scale(1); }
     100% { 
         transform: scale(1.02); 
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.25); 
     }
-}
+} */
 footer{
     display: flex;
     position: end;
@@ -46,5 +44,43 @@ footer{
     -webkit-transform: scale(1.2);
     transform: scale(1.2); 
     
+}
+
+
+
+
+.button-21 {
+  align-items: center;
+  appearance: none;
+  background-color: #3EB2FD;
+  background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: CircularStd,sans-serif;
+  font-size: calc(1 rem + 2vw);
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 1.5% 2%;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .2s,background-position .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.button-21:active,
+.button-21:focus {
+  outline: none;
 }
 
