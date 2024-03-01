@@ -43,6 +43,8 @@ footer{
     -ms-transform: scale(1.2);
     -webkit-transform: scale(1.2);
     transform: scale(1.2); 
+    text-shadow: 2px 2px 4px #000000;
+    transition: 1s;
     
 }
 
@@ -78,9 +80,34 @@ footer{
   vertical-align: top;
   white-space: nowrap;
 }
-
+.button-21:hover{
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); 
+    text-shadow: 2px 2px 4px #000000;
+    transition: 1s;
+    color: white;
+}
 .button-21:active,
 .button-21:focus {
   outline: none;
 }
 
+.text-sec{
+    margin-top: 100px;
+    font-size: xx-large;
+    width: 300px;
+    font-family: "Madimi One", sans-serif;
+  font-weight: 250;
+  font-style: normal;
+  
+}
+.text-third{
+    margin-top: 100px;
+    font-size: xx-large;
+    width: 300px;
+    font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
