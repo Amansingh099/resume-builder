@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body{
-    background-color: antiquewhite;
+    background-color:#149BF3;
 }
 nav{
     position: fixed;
@@ -14,12 +14,119 @@ nav{
 
   }
 .text-main{
-    font-weight: 300;
-    font-size: calc(1.5rem + 2.5vw);
+    font-weight: 600;
+    font-size: calc(1rem + 2.5vw);
+    font-style: italic;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3),  
+             0px 1px 1px rgba(255, 255, 255, 0.2);
 }
 button{
     margin-top: 100px;
 }
+.num{
+    display: inline-block;
+    border: 2px solid #149BF3;
+    color: #149BF3;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding:1%;
+    margin-bottom: 5px;
+
+}
+.num:hover{
+    box-shadow: 5px 5px 3px gray;
+}
+.iconmid{
+    display: inline-block;
+    
+}
+.textnum{
+    font-size: calc(1rem + 0.5vw);
+    font-weight: 400;
+    padding-left: 3%;
+    font-style: oblique;
+    margin-top: 20%;
+}
+.textmid{
+    font-size: 0.8rem;
+}
+.headingmid{
+    font-size: 1rem;
+}
+button{
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: none;
+    transition: all .3s ease-in-out;
+}
+
+.carous {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.carousel-view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 44px 0;
+  transition: all 0.25s ease-in;
+}
+
+.carousel-view .item-list {
+  width: 80vw;
+  padding: 5px 1px;
+  display: flex;
+  gap: 10vw;
+  scroll-behavior: smooth;
+  transition: all 0.25s ease-in;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+@media (max-width: 567px){
+    .item{
+        width:100%;
+        height: 40vh;
+    }
+    .carousel-view{
+        justify-content: center;
+    }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.item-list::-webkit-scrollbar {
+  display: none;
+}
+
+.prev-btn {
+  background : none;
+  cursor: pointer;
+}
+
+.next-btn {
+  cursor: pointer;
+}
+
+.item {
+  scroll-snap-align: center;
+  width: 20vw;
+  height:25vw;
+  border-radius:8px;
+}
+.item:hover{
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+}
+
+  
+
 
 
 /* @keyframes pulse {
@@ -55,7 +162,7 @@ footer{
   background-color: #3EB2FD;
   background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
   background-size: calc(100% + 20px) calc(100% + 20px);
-  border-radius: 100px;
+  border-radius: 80px;
   border-width: 0;
   box-shadow: none;
   box-sizing: border-box;
@@ -77,10 +184,12 @@ footer{
   touch-action: manipulation;
   vertical-align: top;
   white-space: nowrap;
+  margin-top: 10%;
 }
 
 .button-21:active,
 .button-21:focus {
   outline: none;
 }
+
 
