@@ -14,6 +14,8 @@ nav{
 
   }
 .text-main{
+  display: inline-block;
+    padding-left: 2vw;
     font-weight: 600;
     font-size: calc(1rem + 2.5vw);
     font-style: italic;
@@ -69,35 +71,35 @@ button{
   background-color: white;
 }
 
+@media (max-width: 567px){
+    .item{
+        width:100vw;
+        height: 40vh;
+    }
+    .carousel-view{
+        justify-content: center;
+    }
+}
 .carousel-view {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 1vw;
   padding: 44px 0;
   transition: all 0.25s ease-in;
 }
 
 .carousel-view .item-list {
-  width: 80vw;
+  width: 75vw;
   padding: 5px 1px;
   display: flex;
-  gap: 10vw;
+  gap: 9vw;
   scroll-behavior: smooth;
   transition: all 0.25s ease-in;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   overflow: auto;
   scroll-snap-type: x mandatory;
-}
-@media (max-width: 567px){
-    .item{
-        width:100%;
-        height: 40vh;
-    }
-    .carousel-view{
-        justify-content: center;
-    }
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -106,12 +108,15 @@ button{
 }
 
 .prev-btn {
-  background : none;
   cursor: pointer;
+  color: black;
+  font-size: 2rem;
 }
 
 .next-btn {
   cursor: pointer;
+  color: black;
+  font-size: 2rem;
 }
 
 .item {
@@ -185,11 +190,15 @@ footer{
   vertical-align: top;
   white-space: nowrap;
   margin-top: 10%;
+  margin-left: 3vw;
 }
 
 .button-21:active,
-.button-21:focus {
+.button-21:hover {
   outline: none;
+  color:white;
+  padding: 1.7% 2.2%;
+  
 }
 
 
