@@ -19,6 +19,7 @@ body {
 }
 nav{
     position: fixed;
+    background-color: #374457;
 }
 .navbar-git{
     text-decoration: none;
@@ -38,6 +39,7 @@ nav{
     margin-top: 20px;
     margin-bottom:20px;
     max-width: 70vw;
+    min-width: 650px;
     height: 1120px;
     box-shadow: rgba(17, 17, 26, 0.1) 16px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
@@ -118,21 +120,32 @@ nav{
     padding: 3% 0%;
 }
 .skill-rating {
-    font-size: 20px; /* Adjust the dot size */
+    display: flex;
+    flex-wrap: nowrap;
     color: orange;   /* Choose your desired color */
   }
   
-.skill-rating span {
-    margin-right: 5px; /* Add spacing between dots */
+.skill-rating input {
+    width: 3rem;
 }
 .skills{
+    
+    padding: 3% 0%;
+}
+input[type="radio"] {
+    transform: scale(1.5);  /* Increase size by 50% */
+    accent-color: rgb(236, 86, 10);
+  }
+.skillblock{
     display: flex;
     justify-content: space-between;
-    padding: 3% 0%;
+    flex-wrap: nowrap;
 }
 .Achivement{
     padding: 3% 0%;
 }
+
+  
   
 
 
@@ -182,4 +195,20 @@ nav{
     border: #000 2px solid;
     height: 65px;
     width: 65px;
+}
+
+.btn.btn-success{
+    background-color:#374457;
+}
+.btn.btn-success:hover{
+   background-color: rgb(3, 46, 89);
+}
+.btn.btn-danger{
+    background-color: #1D2530;
+}
+.btn.btn-danger:hover{
+    background-color: #0e0909;
+}
+.btn{
+    border-radius: 20px;
 }
