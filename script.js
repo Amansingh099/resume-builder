@@ -10,3 +10,22 @@ prev.addEventListener('click',()=>{
 next.addEventListener('click',()=>{
   list.scrollLeft += (itemWidth + padding)
 })
+document.addEventListener('DOMContentLoaded', function() {
+  const navbarLinks = document.querySelectorAll('.nav-site'); // Assuming your links have a class 'nav-link'
+
+  navbarLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      console.log(this)
+      const targetPosition = targetElement.offsetTop;
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    });
+  });
+});

@@ -1,11 +1,11 @@
 
 function printpdf() {
     var content = document.getElementById("print");
-
     const allButtons = document.querySelectorAll("#print button");
     allButtons.forEach(button => {
         button.classList.add("none");
     });
+
     let allInputCheckboxes = document.querySelectorAll(".input-checkbox");
     allInputCheckboxes.forEach(input => {
         input.classList.add("none");

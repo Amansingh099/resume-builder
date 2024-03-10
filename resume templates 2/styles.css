@@ -33,6 +33,7 @@ nav{
 
 .none {
     display: none;
+
 }
 
 .resume {
@@ -83,6 +84,7 @@ nav{
     
     background-color: #374457;
     display: flex;
+    
     justify-content: flex-start;
     color: white;
 
@@ -120,22 +122,21 @@ nav{
     padding: 3% 0%;
 }
 .skill-rating {
-    display: flex;
+    display: inline-block;
     flex-wrap: nowrap;
     color: orange;   /* Choose your desired color */
   }
   
 .skill-rating input {
     width: 3rem;
+    accent-color: orange;
 }
 .skills{
-    
     padding: 3% 0%;
 }
-input[type="radio"] {
-    transform: scale(1.5);  /* Increase size by 50% */
-    accent-color: rgb(236, 86, 10);
-  }
+/* input[type="radio"] {
+    transform: scale(1.5);  /* Increase size by 50% 
+    accent-color: rgb(236, 86, 10); }*/
 .skillblock{
     display: flex;
     justify-content: space-between;
@@ -211,4 +212,7 @@ input[type="radio"] {
 }
 .btn{
     border-radius: 20px;
+}
+.input-checkbox {
+    margin-right: 10px;
 }

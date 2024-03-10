@@ -1,11 +1,12 @@
 
 function printpdf() {
     var content = document.getElementById("print");
-
-    const allButtons = document.querySelectorAll("#print button");
+    let allButtons = document.querySelectorAll("#print button");
+    console.log(allButtons);
     allButtons.forEach(button => {
         button.classList.add("none");
     });
+    
     let allInputCheckboxes = document.querySelectorAll(".input-checkbox");
     allInputCheckboxes.forEach(input => {
         input.classList.add("none");
@@ -37,7 +38,7 @@ function remedu(event) {
     let empty = true;
     const allInputCheckboxes = event.target.parentElement.getElementsByClassName("input-checkbox");
     const array = Array.from(allInputCheckboxes);
-    if (array.length == -1) {
+    if (array.length == 0) {
         alert("No Fields Are Present To Be Deleted!")
     }
     else {
@@ -48,7 +49,7 @@ function remedu(event) {
                 element.parentElement.parentElement.remove();
             }
         })
-        if (val === -1) alert("Please Select The Checkboxes To Delete The Required Field!")
+        if (val === 0) alert("Please Select The Checkboxes To Delete The Required Field!")
     }
     additngclass();
     saveresume();
