@@ -1,12 +1,10 @@
-
 function printpdf() {
     var content = document.getElementById("print");
-    let allButtons = document.querySelectorAll("#print button");
-    console.log(allButtons);
+    const allButtons = document.querySelectorAll("#print button");
     allButtons.forEach(button => {
         button.classList.add("none");
     });
-    
+
     let allInputCheckboxes = document.querySelectorAll(".input-checkbox");
     allInputCheckboxes.forEach(input => {
         input.classList.add("none");
@@ -23,15 +21,67 @@ function printpdf() {
         input.classList.remove("none");
     })
 }
-
-
-
+function addskill() {
+    const head = document.createElement('div');
+    document.getElementById("skills").appendChild(head);
+    head.innerHTML = ('<div class="skill"><span><input type="checkbox" class="input-checkbox"></span><span></span><span class="editable skillinput"contenteditable="true">Write Your Skill Here</span></div>');
+    additngclass();
+}
+function remskill(event) {
+    let val = 0;
+    const allInputCheckboxes = event.target.parentElement.getElementsByClassName("input-checkbox");
+    const array = Array.from(allInputCheckboxes);
+    setTimeout(() => {
+        console.log(array); 
+     }, 100);
+    if (array.length == 0) {
+        alert("No Fields Are Present To Be Deleted!")
+    }
+    else {
+        array.reverse().forEach(element => {
+            if (element.checked === true) {
+                val = 1;
+                element.parentElement.parentElement.remove();
+            }
+        })
+        if (val === 0) alert("Please Select The Checkboxes To Delete The Required Field!")
+    }
+    additngclass();
+    
+}
+function addLang() {
+    const head = document.createElement('div');
+    document.getElementById("languages").appendChild(head);
+    head.innerHTML = ('<div class="language"><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true" class="editable">LANGNAME</span>&nbsp-&nbsp<span contenteditable="true" class="editable">Level You Know</span></div>');
+    additngclass();
+    
+}
+function remLang(event) {
+    let val = 0;
+    const allInputCheckboxes = event.target.parentElement.getElementsByClassName("input-checkbox");
+    const array = Array.from(allInputCheckboxes);
+    if (array.length === 0) {
+        alert("No Fields Are Present To Be Deleted!")
+    }
+    else {
+        console.log(array);
+        array.forEach(element => {
+            if (element.checked === true) {
+                val = 1;
+                element.parentElement.parentElement.remove();
+            }
+        })
+        if (val === 0) alert("Please Select The Checkboxes To Delete The Required Field!")
+    }
+    additngclass();
+    
+}
 function addedu() {
     const head = document.createElement('div');
     document.getElementById("education").appendChild(head);
-    head.innerHTML = ('<div class="edublock"><span><input type="checkbox" class="input-checkbox"></span><span class="education-head editable" style="font-weight: 600; font-size: 20px;" contenteditable="true">YOUR DEGREE</span><div><span class="editable" contenteditable="true">Institute Name</span> - <spancontenteditable="true">Passing Year</spancontenteditable=></div></div>');
+    head.innerHTML = ('<div class="edublock"><span><input type="checkbox" class="input-checkbox"></span><span class="education-head editable" contenteditable="true">YOUR DEGREE</span><div ><span class="editable"contenteditable="true">Institute name</span> - <span contenteditable="true" class="editable">Passing Year</span></div></div>');
     additngclass();
-    saveresume();
+    
 }
 function remedu(event) {
     let val = 0;
@@ -45,38 +95,6 @@ function remedu(event) {
         console.log(array);
         array.forEach(element => {
             if (element.checked === true) {
-                val = 0;
-                element.parentElement.parentElement.remove();
-            }
-        })
-        if (val === 0) alert("Please Select The Checkboxes To Delete The Required Field!")
-    }
-    additngclass();
-    saveresume();
-}
-
-
-function addskill() {
-    const head = document.createElement('div');
-    document.getElementById("skills").appendChild(head);
-    head.innerHTML = ('<div class="skillblock"><span><input type="checkbox" class="input-checkbox"><span contenteditable="true">SKILL</span></span><form><fieldset class="skill-rating"> <label><input type="radio" name="skill-level" value="1">  </label><label><input type="radio" name="skill-level" value="2"> </label><label><input type="radio" name="skill-level" value="3"> </label><label><input type="radio" name="skill-level" value="4"> </label><label><input type="radio" name="skill-level" value="5"> </label></fieldset></form></div>');
-    additngclass();
-    saveresume();
-}
-function remskill(event) {
-    let val = 0;
-    const allInputCheckboxes = event.target.parentElement.getElementsByClassName("input-checkbox");
-    const array = Array.from(allInputCheckboxes);
-    setTimeout(() => {
-        console.log(array); 
-     }, 100);
-    if (array.length === 0) {
-        alert("No Fields Are Present To Be Deleted!")
-    }
-    else {
-        console.log(array);
-        array.forEach(element => {
-            if (element.checked === true) {
                 val = 1;
                 element.parentElement.parentElement.remove();
             }
@@ -84,100 +102,8 @@ function remskill(event) {
         if (val === 0) alert("Please Select The Checkboxes To Delete The Required Field!")
     }
     additngclass();
-    saveresume();
+    
 }
-
-
-
-
-function addLang() {
-    const head = document.createElement('div');
-    document.getElementById("languages").appendChild(head);
-    head.innerHTML = ('<div class="language"><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true" class="editable">LANGNAME</span>&nbsp-&nbsp<span contenteditable="true" class="editable">level u know</span></div>');
-    additngclass();
-    saveresume();
-}
-function remLang(event){
-    let val = 0;
-    const allInputCheckboxes = event.target.parentElement.getElementsByClassName("input-checkbox");
-    const array = Array.from(allInputCheckboxes);
-    setTimeout(() => {
-        console.log(array); 
-     }, 100);
-    if (array.length === 0) {
-        alert("No Fields Are Present To Be Deleted!")
-    }
-    else {
-        console.log(array);
-        array.forEach(element => {
-            if (element.checked === true) {
-                val = 1;
-                element.parentElement.parentElement.remove();
-            }
-        })
-        if (val === 0) alert("Please Select The Checkboxes To Delete The Required Field!")
-    }
-    additngclass();
-    saveresume();
-}
-
-
-function addAch() {
-    const head = document.createElement('div');
-    document.getElementById("achievement").appendChild(head);
-    head.innerHTML = ('<div class="achieve" ><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true" class="editable">Write your achievement</span></div>');
-    additngclass();
-    saveresume();
-}
-function remAch(event) {
-    let val = 0;
-    const allInputCheckboxes = event.target.parentElement.getElementsByClassName("input-checkbox");
-    const array = Array.from(allInputCheckboxes);
-    if (array.length === 0) {
-        alert("No Fields Are Present To Be Deleted!")
-    }
-    else {
-        console.log(array);
-        array.forEach(element => {
-            if (element.checked === true) {
-                val = 1;
-                element.parentElement.parentElement.remove();
-            }
-        })
-        if (val === 0) alert("Please Select The Checkboxes To Delete The Required Field!")
-    }
-    additngclass();
-    saveresume();
-}
-
-
-function addInt() {
-    const head = document.createElement('div');
-    document.getElementById("interest").appendChild(head);
-    head.innerHTML = ('<div class="achieve" ><span><input type="checkbox" class="input-checkbox"></span><span class="editable" contenteditable="true">Write interest</span></div>');
-    additngclass();
-    saveresume();
-}
-function remInt(event) {
-    let val = 0;
-    const allInputCheckboxes = event.target.parentElement.getElementsByClassName("input-checkbox");
-    const array = Array.from(allInputCheckboxes);
-    if (array.length === 0) {
-        alert("No Fields Are Present To Be Deleted!")
-    }
-    else {
-        array.forEach(element => {
-            if (element.checked === true) {
-                val = 1;
-                element.parentElement.parentElement.remove();
-            }
-        })
-        if (val === 0) alert("Please Select The Checkboxes To Delete The Required Field!")
-    }
-    additngclass();
-    saveresume();
-}
-
 let maxNewSection = 1;
 function addsec() {
     if (maxNewSection < 2) {
@@ -220,17 +146,10 @@ function remsec(event) {
     additngclass();
     saveresume();
 }
-
-function saveresume() {
-    var sec = document.getElementById("print");
-    value1 = sec.innerHTML;
-    var info = document.getElementById("custinfo");
-    info.value = value1;
-}
-
 let editableElements=document.querySelectorAll('.editable');
 
 function additngclass(){
+    
     editableElements = document.querySelectorAll('.editable');
     editableElements.forEach(element => {
         const defaultText=element.innerHTML;
@@ -250,5 +169,3 @@ function additngclass(){
     });
 }
 additngclass();
-
-
