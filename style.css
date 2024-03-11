@@ -238,7 +238,7 @@ footer{
         text-transform: uppercase;  
     }  
     #footer {  
-        background: #4c4985;  
+        background: #7F7DFB;  
     }  
     #footer h5 {  
     padding-left: 10px;  
@@ -299,3 +299,60 @@ footer{
       }
 
 
+/* --------------------------- */
+
+.drop-main span{
+  display:inline-block;
+}
+.d {
+  opacity: 0;
+  animation: drop 1s linear forwards;
+  
+}
+.r {
+  opacity: 0;
+  animation: drop 1s linear forwards 0.2s;
+  
+}
+.o {
+  opacity: 0;
+  animation: drop 1s linear forwards 0.4s;
+  
+}
+.p {
+  opacity: 0;
+  animation: drop 1s linear forwards 0.6s;
+  
+}
+.s {
+  opacity: 0;
+  animation: drop 1s linear forwards 0.8s;
+  
+}
+.q{
+  opacity:0;
+  animation: drop 0.8s linear forwards 1s;
+}
+
+@keyframes drop {
+  0% {
+      transform: translateX(-100px);
+      opacity: 0;
+  }
+  50% {
+      transform: translateY(0px);
+      opacity: 0;
+  }
+  65% {
+      transform: translateY(-0px);
+      opacity: 0.6;
+  }
+  75% {
+      transform: translateY(-2px);
+      opacity: 0.8;
+  }
+  100% {
+      transform: translateY(0px);
+      opacity: 1;
+  }
+}
